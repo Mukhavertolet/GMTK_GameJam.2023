@@ -176,7 +176,41 @@ ScriptedImporter:
     linkedCells: []
     parentIndex: -1
   - layerIndex: 7
-    guid: -107726991
+    guid: -102633187
+    name: gr empty
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: gr empty
+      frameIndex: 0
+      cellRect:
+        x: 160
+        y: 136
+        width: 40
+        height: 40
+      spriteId: f35bf09c16bb5b34aa2593847d39c169
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 8
+    guid: 1058862371
+    name: gr line
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: gr line
+      frameIndex: 0
+      cellRect:
+        x: 160
+        y: 96
+        width: 40
+        height: 14
+      spriteId: 45e38068cd005ff49b77d91686f10d67
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 9
+    guid: -107726977
     name: sp small
     layerFlags: 3
     layerType: 0
@@ -185,15 +219,15 @@ ScriptedImporter:
     - name: sp small
       frameIndex: 0
       cellRect:
-        x: 60
+        x: 61
         y: 196
         width: 20
         height: 24
-      spriteId: 194ab7afccfaef94fbc0ed860465a993
+      spriteId: 14c858848f8a2364c998de307a3fe6a7
     linkedCells: []
     parentIndex: -1
-  - layerIndex: 8
-    guid: 1000560409
+  - layerIndex: 10
+    guid: 1000560411
     name: gr
     layerFlags: 3
     layerType: 0
@@ -206,11 +240,11 @@ ScriptedImporter:
         y: 136
         width: 40
         height: 40
-      spriteId: a31e13a8ab66b7c48a5256d311d76421
+      spriteId: 1c87461cdba5e8144857dd2da13d02a2
     linkedCells: []
     parentIndex: -1
-  - layerIndex: 9
-    guid: -1224532262
+  - layerIndex: 11
+    guid: -1224532264
     name: sp
     layerFlags: 3
     layerType: 0
@@ -223,11 +257,11 @@ ScriptedImporter:
         y: 136
         width: 40
         height: 46
-      spriteId: 367f723e79d0b17458d4f80c891b4aef
+      spriteId: bab7dd12b3eadbe4db673115858fa494
     linkedCells: []
     parentIndex: -1
-  - layerIndex: 10
-    guid: -1157501142
+  - layerIndex: 12
+    guid: -1157501140
     name: gr key
     layerFlags: 3
     layerType: 0
@@ -240,11 +274,11 @@ ScriptedImporter:
         y: 95
         width: 40
         height: 40
-      spriteId: f4cb8f83239457242a64ddccfe689f72
+      spriteId: d8ef88d5af95bcc4d8f79c556039112d
     linkedCells: []
     parentIndex: -1
-  - layerIndex: 11
-    guid: 1508974838
+  - layerIndex: 13
+    guid: 1508974832
     name: keyhole
     layerFlags: 3
     layerType: 0
@@ -257,11 +291,11 @@ ScriptedImporter:
         y: 54
         width: 40
         height: 40
-      spriteId: 328ec44b63b997a40809409261417d5d
+      spriteId: 216969a0646b6af40861f585dd809068
     linkedCells: []
     parentIndex: -1
-  - layerIndex: 12
-    guid: 1688660280
+  - layerIndex: 14
+    guid: 1688660282
     name: gr arr
     layerFlags: 3
     layerType: 0
@@ -274,11 +308,11 @@ ScriptedImporter:
         y: 95
         width: 40
         height: 40
-      spriteId: 9b7be17991e0abf4ebe895f127e18b9b
+      spriteId: 46b097ff0712f9a4bae7b5fa0e8c4b17
     linkedCells: []
     parentIndex: -1
-  - layerIndex: 13
-    guid: 1743370065
+  - layerIndex: 15
+    guid: 1743370067
     name: arr plc
     layerFlags: 3
     layerType: 0
@@ -291,11 +325,11 @@ ScriptedImporter:
         y: 54
         width: 40
         height: 40
-      spriteId: 7ce6f36898c3b5146bbbd6d1d7ef26c3
+      spriteId: b31154c0cb425b7449743804f8dffb64
     linkedCells: []
     parentIndex: -1
-  - layerIndex: 14
-    guid: 2125869066
+  - layerIndex: 16
+    guid: 2125869076
     name: arr1
     layerFlags: 3
     layerType: 0
@@ -308,11 +342,11 @@ ScriptedImporter:
         y: 119
         width: 12
         height: 17
-      spriteId: 5b17ebb768223f141aa2a09b762f2cd0
+      spriteId: ed56922e7c4fc6b49abc9951909c620a
     linkedCells: []
     parentIndex: -1
-  - layerIndex: 15
-    guid: -1134164884
+  - layerIndex: 17
+    guid: -1134164878
     name: arr2
     layerFlags: 3
     layerType: 0
@@ -325,11 +359,11 @@ ScriptedImporter:
         y: 124
         width: 17
         height: 12
-      spriteId: 5c022b2d16bf0014ebe99590ca065138
+      spriteId: 98161dec580411544abaf0f5d785511c
     linkedCells: []
     parentIndex: -1
-  - layerIndex: 16
-    guid: -99231534
+  - layerIndex: 18
+    guid: -99231536
     name: arr3
     layerFlags: 3
     layerType: 0
@@ -342,11 +376,11 @@ ScriptedImporter:
         y: 99
         width: 12
         height: 17
-      spriteId: 32042ab84b0005d4486fc64c94b8a398
+      spriteId: 00d5603caf8eeee4abdd6117a26aeda4
     linkedCells: []
     parentIndex: -1
-  - layerIndex: 17
-    guid: 935701808
+  - layerIndex: 19
+    guid: 935701810
     name: arr4
     layerFlags: 3
     layerType: 0
@@ -359,11 +393,11 @@ ScriptedImporter:
         y: 104
         width: 17
         height: 12
-      spriteId: d626a93b3dc1ccc479a36f7a0e53f01a
+      spriteId: 849492f3cca138247b1bd78daec6229f
     linkedCells: []
     parentIndex: -1
-  - layerIndex: 18
-    guid: 1317222730
+  - layerIndex: 20
+    guid: 1317222732
     name: Layer 1
     layerFlags: 3
     layerType: 0
@@ -376,11 +410,11 @@ ScriptedImporter:
         y: 80
         width: 32
         height: 16
-      spriteId: 61bb7885e1965de41adac94a977363e8
+      spriteId: 05f9b6009feac804ea288506fe75bde5
     linkedCells: []
     parentIndex: -1
-  - layerIndex: 19
-    guid: 956049582
+  - layerIndex: 21
+    guid: 956049576
     name: skeleton
     layerFlags: 35
     layerType: 1
@@ -388,8 +422,8 @@ ScriptedImporter:
     cells: []
     linkedCells: []
     parentIndex: -1
-  - layerIndex: 20
-    guid: -798031755
+  - layerIndex: 22
+    guid: -798031753
     name: left leg
     layerFlags: 3
     layerType: 0
@@ -402,11 +436,11 @@ ScriptedImporter:
         y: 207
         width: 7
         height: 9
-      spriteId: 39a89ab2b665eb44bbcf5899ce793d11
+      spriteId: 255f340b57f88f6458e6ddbdba1f8d75
     linkedCells: []
-    parentIndex: 19
-  - layerIndex: 21
-    guid: 898841841
+    parentIndex: 21
+  - layerIndex: 23
+    guid: 898841843
     name: right leg
     layerFlags: 3
     layerType: 0
@@ -419,11 +453,11 @@ ScriptedImporter:
         y: 187
         width: 7
         height: 9
-      spriteId: b0c7f3a7992612d41923e77bc5b4d1c7
+      spriteId: 2171eb5c0363b1c4ba08f3da60455311
     linkedCells: []
-    parentIndex: 19
-  - layerIndex: 22
-    guid: -1030214484
+    parentIndex: 21
+  - layerIndex: 24
+    guid: -1030214494
     name: body
     layerFlags: 3
     layerType: 0
@@ -436,11 +470,11 @@ ScriptedImporter:
         y: 221
         width: 14
         height: 15
-      spriteId: 85a3baaa99ebcbc4d865e5dc906c4242
+      spriteId: 98757a6357ff99e4980cfa769fafb2e8
     linkedCells: []
-    parentIndex: 19
-  - layerIndex: 23
-    guid: 1402582487
+    parentIndex: 21
+  - layerIndex: 25
+    guid: 1402582489
     name: head
     layerFlags: 3
     layerType: 0
@@ -453,11 +487,11 @@ ScriptedImporter:
         y: 239
         width: 18
         height: 17
-      spriteId: eaf8cff9653a2c94082e2303628950f5
+      spriteId: aff7ccb89f8d20c469aefcf76c3be7a5
     linkedCells: []
-    parentIndex: 19
-  - layerIndex: 24
-    guid: 109657859
+    parentIndex: 21
+  - layerIndex: 26
+    guid: 109657857
     name: knight
     layerFlags: 3
     layerType: 1
@@ -465,8 +499,8 @@ ScriptedImporter:
     cells: []
     linkedCells: []
     parentIndex: -1
-  - layerIndex: 25
-    guid: -798031752
+  - layerIndex: 27
+    guid: -798031750
     name: left leg
     layerFlags: 3
     layerType: 0
@@ -479,11 +513,11 @@ ScriptedImporter:
         y: 207
         width: 7
         height: 9
-      spriteId: ca3d306e7137b0b41b0b893303c5c65e
+      spriteId: cd0aaf802cbe3cb43bc0e720c7a3034e
     linkedCells: []
-    parentIndex: 24
-  - layerIndex: 26
-    guid: -1030214496
+    parentIndex: 26
+  - layerIndex: 28
+    guid: -1030214490
     name: body
     layerFlags: 3
     layerType: 0
@@ -496,11 +530,11 @@ ScriptedImporter:
         y: 223
         width: 23
         height: 13
-      spriteId: ecc5044cf604fa14d926d17999e219a3
+      spriteId: d383608fe191d944eb2e8d9a8fd2a3bc
     linkedCells: []
-    parentIndex: 24
-  - layerIndex: 27
-    guid: 898841855
+    parentIndex: 26
+  - layerIndex: 29
+    guid: 898841849
     name: right leg
     layerFlags: 3
     layerType: 0
@@ -513,11 +547,11 @@ ScriptedImporter:
         y: 187
         width: 7
         height: 9
-      spriteId: 6db49658197dcbb40be2aeaccfe34a23
+      spriteId: fd61d1c704e03f14387b3e641af3cfc2
     linkedCells: []
-    parentIndex: 24
-  - layerIndex: 28
-    guid: 1402582492
+    parentIndex: 26
+  - layerIndex: 30
+    guid: 1402582494
     name: head
     layerFlags: 3
     layerType: 0
@@ -530,9 +564,9 @@ ScriptedImporter:
         y: 238
         width: 19
         height: 18
-      spriteId: 2c10a15ff871a1a47bf3e5a80c6d47d6
+      spriteId: c21f22261cf89884ab483a28368457c9
     linkedCells: []
-    parentIndex: 24
+    parentIndex: 26
   platformSettings:
   - name: DefaultTexturePlatform
     overridden: 0

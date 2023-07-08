@@ -8,7 +8,14 @@ public class Tile : MonoBehaviour
     [SerializeField] private SpriteRenderer renderer;
     [SerializeField] private GameObject highlight;
 
+    [SerializeField] private Sprite filledSprite;
+    [SerializeField] private Sprite cleanSprite;
+
+
     public Vector2 coordinates;
+    public bool isClean = false;
+
+    public List<GameObject> contents;
 
 
 
@@ -29,9 +36,26 @@ public class Tile : MonoBehaviour
         highlight.SetActive(false);
     }
 
-    private void OnMouseDown()
+    private void OnMouseOver()
     {
-        Debug.Log($"coordinates: {coordinates}");
+        if (Input.GetMouseButtonDown(0))
+        {
+            this.isClean = true;
+            this.renderer.sprite = cleanSprite;
+            Debug.Log($"coordinates: {coordinates}");
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            this.isClean = false;
+            this.renderer.sprite = filledSprite;
+            Debug.Log($"coordinates: {coordinates}");
+        }
+
+
+
     }
+
+
 
 }

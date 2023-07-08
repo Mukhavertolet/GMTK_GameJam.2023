@@ -257,13 +257,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet-1_7
+      name: GroundSmallTile-sprite
       rect:
         serializedVersion: 2
         x: 40
         y: 196
-        width: 40
-        height: 24
+        width: 20
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -487,6 +487,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: GroundEmptyTile-sprite
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 136
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d444fa17b2fc01e40a75c707d5e8a263
+      internalID: 247988975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundLine-sprite
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 40
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c94701d1fa79941b71b722db627e2b
+      internalID: 1584681877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -500,6 +542,9 @@ TextureImporter:
     nameFileIdTable:
       Arrow-sprite: 2079611062
       ArrowPlace-sprite: -1011368126
+      GroundEmptyTile-sprite: 247988975
+      GroundLine-sprite: 1584681877
+      GroundSmallTile-sprite: 1359497155
       GroundTile-sprite: -1867482886
       Key-sprite: 2130415286
       Keyhole-sprite: 680752227
@@ -513,7 +558,6 @@ TextureImporter:
       Spritesheet-1_4: -1233731391
       Spritesheet-1_5: -391306287
       Spritesheet-1_6: 1532625150
-      Spritesheet-1_7: 1359497155
       Spritesheet-1_8: -2141350973
       Spritesheet-1_9: -227469618
   mipmapLimitGroupName: 

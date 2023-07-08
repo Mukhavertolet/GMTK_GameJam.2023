@@ -12,6 +12,13 @@ public class GridManager : MonoBehaviour
 
 
 
+
+
+    private void Awake()
+    {
+        tiles = new Tile[width, height];
+    }
+
     private void Start()
     {
         GenerateGrid();
@@ -24,14 +31,15 @@ public class GridManager : MonoBehaviour
             for (int y = 0; y < height; y++)
             {
                 Tile spawnedTile = Instantiate(tilePrefab, new Vector3(x, y), Quaternion.identity);
+
                 spawnedTile.name = $"Tile {x} {y}";
+                spawnedTile.coordinates = new Vector2(x, y);
 
                 bool isOffset = (x + y) % 2 == 1;
                 spawnedTile.Initialize(isOffset);
 
-                //tiles[x, y] = spawnedTile;
-                spawnedTile.coordinates = new Vector2(x, y);
 
+                tiles[x, y] = spawnedTile;
             }
         }
     }
