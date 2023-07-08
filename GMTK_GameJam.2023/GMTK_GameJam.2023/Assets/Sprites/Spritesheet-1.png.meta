@@ -517,7 +517,7 @@ TextureImporter:
         width: 40
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -525,6 +525,48 @@ TextureImporter:
       bones: []
       spriteID: 08c94701d1fa79941b71b722db627e2b
       internalID: 1584681877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 36
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf907bb522a5923459628aebbf31b34c
+      internalID: -575628665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 16
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4170712c5081fc647b9c748d508e2c19
+      internalID: 2126351351
       vertices: []
       indices: 
       edges: []
@@ -542,10 +584,12 @@ TextureImporter:
     nameFileIdTable:
       Arrow-sprite: 2079611062
       ArrowPlace-sprite: -1011368126
+      Chest: 2126351351
       GroundEmptyTile-sprite: 247988975
       GroundLine-sprite: 1584681877
       GroundSmallTile-sprite: 1359497155
       GroundTile-sprite: -1867482886
+      Heart: -575628665
       Key-sprite: 2130415286
       Keyhole-sprite: 680752227
       KnightHead-sprite: -786365996
