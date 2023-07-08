@@ -1,0 +1,575 @@
+fileFormatVersion: 2
+guid: 71f3f51151d187c48b97e2bc8e3d8428
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 0
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 20
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 0
+    importHiddenLayers: 0
+    layerImportMode: 0
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 0
+    importHiddenLayers: 0
+    layerImportMode: 0
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638243837508091737
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Spritesheet-1
+    originalName: 
+    pivot: {x: 0.81528664, y: -0.28}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 157
+      height: 200
+    spriteID: ba88b6cb4561d1541affb317108fc619
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -44376519
+    name: sword
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: sword
+      frameIndex: 0
+      cellRect:
+        x: 100
+        y: 233
+        width: 10
+        height: 23
+      spriteId: 2134777754fe8cc42b045d0ef0ef4495
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 6
+    guid: -644039562
+    name: gr small
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: gr small
+      frameIndex: 0
+      cellRect:
+        x: 40
+        y: 196
+        width: 20
+        height: 20
+      spriteId: a03e0cf381d3aac448fdbf2a3e0fdfe7
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 7
+    guid: -107726991
+    name: sp small
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: sp small
+      frameIndex: 0
+      cellRect:
+        x: 60
+        y: 196
+        width: 20
+        height: 24
+      spriteId: 194ab7afccfaef94fbc0ed860465a993
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 8
+    guid: 1000560409
+    name: gr
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: gr
+      frameIndex: 0
+      cellRect:
+        x: 40
+        y: 136
+        width: 40
+        height: 40
+      spriteId: a31e13a8ab66b7c48a5256d311d76421
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 9
+    guid: -1224532262
+    name: sp
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: sp
+      frameIndex: 0
+      cellRect:
+        x: 81
+        y: 136
+        width: 40
+        height: 46
+      spriteId: 367f723e79d0b17458d4f80c891b4aef
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 10
+    guid: -1157501142
+    name: gr key
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: gr key
+      frameIndex: 0
+      cellRect:
+        x: 40
+        y: 95
+        width: 40
+        height: 40
+      spriteId: f4cb8f83239457242a64ddccfe689f72
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 11
+    guid: 1508974838
+    name: keyhole
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: keyhole
+      frameIndex: 0
+      cellRect:
+        x: 40
+        y: 54
+        width: 40
+        height: 40
+      spriteId: 328ec44b63b997a40809409261417d5d
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 12
+    guid: 1688660280
+    name: gr arr
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: gr arr
+      frameIndex: 0
+      cellRect:
+        x: 81
+        y: 95
+        width: 40
+        height: 40
+      spriteId: 9b7be17991e0abf4ebe895f127e18b9b
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 13
+    guid: 1743370065
+    name: arr plc
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: arr plc
+      frameIndex: 0
+      cellRect:
+        x: 81
+        y: 54
+        width: 40
+        height: 40
+      spriteId: 7ce6f36898c3b5146bbbd6d1d7ef26c3
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 14
+    guid: 2125869066
+    name: arr1
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: arr1
+      frameIndex: 0
+      cellRect:
+        x: 122
+        y: 119
+        width: 12
+        height: 17
+      spriteId: 5b17ebb768223f141aa2a09b762f2cd0
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 15
+    guid: -1134164884
+    name: arr2
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: arr2
+      frameIndex: 0
+      cellRect:
+        x: 140
+        y: 124
+        width: 17
+        height: 12
+      spriteId: 5c022b2d16bf0014ebe99590ca065138
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 16
+    guid: -99231534
+    name: arr3
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: arr3
+      frameIndex: 0
+      cellRect:
+        x: 122
+        y: 99
+        width: 12
+        height: 17
+      spriteId: 32042ab84b0005d4486fc64c94b8a398
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 17
+    guid: 935701808
+    name: arr4
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: arr4
+      frameIndex: 0
+      cellRect:
+        x: 140
+        y: 104
+        width: 17
+        height: 12
+      spriteId: d626a93b3dc1ccc479a36f7a0e53f01a
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 18
+    guid: 1317222730
+    name: Layer 1
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Layer 1
+      frameIndex: 0
+      cellRect:
+        x: 128
+        y: 80
+        width: 32
+        height: 16
+      spriteId: 61bb7885e1965de41adac94a977363e8
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 19
+    guid: 956049582
+    name: skeleton
+    layerFlags: 35
+    layerType: 1
+    blendMode: 0
+    cells: []
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 20
+    guid: -798031755
+    name: left leg
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: left leg
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: 207
+        width: 7
+        height: 9
+      spriteId: 39a89ab2b665eb44bbcf5899ce793d11
+    linkedCells: []
+    parentIndex: 19
+  - layerIndex: 21
+    guid: 898841841
+    name: right leg
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: right leg
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: 187
+        width: 7
+        height: 9
+      spriteId: b0c7f3a7992612d41923e77bc5b4d1c7
+    linkedCells: []
+    parentIndex: 19
+  - layerIndex: 22
+    guid: -1030214484
+    name: body
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: body
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: 221
+        width: 14
+        height: 15
+      spriteId: 85a3baaa99ebcbc4d865e5dc906c4242
+    linkedCells: []
+    parentIndex: 19
+  - layerIndex: 23
+    guid: 1402582487
+    name: head
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: head
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: 239
+        width: 18
+        height: 17
+      spriteId: eaf8cff9653a2c94082e2303628950f5
+    linkedCells: []
+    parentIndex: 19
+  - layerIndex: 24
+    guid: 109657859
+    name: knight
+    layerFlags: 3
+    layerType: 1
+    blendMode: 0
+    cells: []
+    linkedCells: []
+    parentIndex: -1
+  - layerIndex: 25
+    guid: -798031752
+    name: left leg
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: left leg
+      frameIndex: 0
+      cellRect:
+        x: 20
+        y: 207
+        width: 7
+        height: 9
+      spriteId: ca3d306e7137b0b41b0b893303c5c65e
+    linkedCells: []
+    parentIndex: 24
+  - layerIndex: 26
+    guid: -1030214496
+    name: body
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: body
+      frameIndex: 0
+      cellRect:
+        x: 20
+        y: 223
+        width: 23
+        height: 13
+      spriteId: ecc5044cf604fa14d926d17999e219a3
+    linkedCells: []
+    parentIndex: 24
+  - layerIndex: 27
+    guid: 898841855
+    name: right leg
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: right leg
+      frameIndex: 0
+      cellRect:
+        x: 20
+        y: 187
+        width: 7
+        height: 9
+      spriteId: 6db49658197dcbb40be2aeaccfe34a23
+    linkedCells: []
+    parentIndex: 24
+  - layerIndex: 28
+    guid: 1402582492
+    name: head
+    layerFlags: 3
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: head
+      frameIndex: 0
+      cellRect:
+        x: 20
+        y: 238
+        width: 19
+        height: 18
+      spriteId: 2c10a15ff871a1a47bf3e5a80c6d47d6
+    linkedCells: []
+    parentIndex: 24
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Server
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 256, y: 256}
