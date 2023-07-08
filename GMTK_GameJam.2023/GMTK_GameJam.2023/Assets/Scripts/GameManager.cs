@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private GridManager gridManager;
     [SerializeField] private Canvas inGameUI;
     [SerializeField] private GameObject helpMenu;
+    [SerializeField] private GameObject trapMenu;
 
 
 
@@ -34,6 +35,9 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Tab))
             helpMenu.SetActive(!helpMenu.activeSelf);
+
+        if (Input.GetKeyDown(KeyCode.Z))
+            trapMenu.SetActive(!trapMenu.activeSelf);
     }
 
 
