@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
+    [SerializeField] private bool isInteractable = true;
+
+
     [SerializeField] private Color baseColor, offsetColor;
     [SerializeField] private SpriteRenderer renderer;
     [SerializeField] private GameObject highlight;
 
     [SerializeField] private Sprite filledSprite;
     [SerializeField] private Sprite cleanSprite;
+    [SerializeField] private GameObject linings;
 
 
     public Vector2 coordinates;
@@ -28,27 +32,33 @@ public class Tile : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        highlight.SetActive(true);
+        if (isInteractable)
+            highlight.SetActive(true);
     }
 
     private void OnMouseExit()
     {
-        highlight.SetActive(false);
+        if (isInteractable)
+            highlight.SetActive(false);
     }
 
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && isInteractable)
         {
-            this.isClean = true;
-            this.renderer.sprite = cleanSprite;
+            isClean = true;
+            renderer.sprite = cleanSprite;
+            renderer.sortingOrder = 4;
+            linings.SetActive(true);
             Debug.Log($"coordinates: {coordinates}");
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && isInteractable)
         {
-            this.isClean = false;
-            this.renderer.sprite = filledSprite;
+            isClean = false;
+            renderer.sprite = filledSprite;
+            renderer.sortingOrder = 2;
+            linings.SetActive(false);
             Debug.Log($"coordinates: {coordinates}");
         }
 
@@ -56,6 +66,11 @@ public class Tile : MonoBehaviour
 
     }
 
+
+    public void ChangeInteractabilityTo(bool interactability)
+    {
+        isInteractable = interactability;
+    }
 
 
 }

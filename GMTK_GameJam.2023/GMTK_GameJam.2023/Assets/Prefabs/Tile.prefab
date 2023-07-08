@@ -561,6 +561,7 @@ MonoBehaviour:
   highlight: {fileID: 6465295216117700684}
   filledSprite: {fileID: 247988975, guid: b2034a3d92d987d4ca7fba3b78e4ec65, type: 3}
   cleanSprite: {fileID: -1867482886, guid: b2034a3d92d987d4ca7fba3b78e4ec65, type: 3}
+  linings: {fileID: 7735714545997318321}
   coordinates: {x: 0, y: 0}
   isClean: 0
   contents: []

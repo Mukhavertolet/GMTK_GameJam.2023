@@ -45,6 +45,17 @@ public class GridManager : MonoBehaviour
     }
 
 
+    public void ChangeTileInteractabilityTo(bool interactability)
+    {
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                tiles[x, y].ChangeInteractabilityTo(interactability);
+            }
+        }
+    }
+
 
     public Vector2 GetSize()
     {
