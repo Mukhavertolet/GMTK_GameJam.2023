@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
-    [SerializeField] private int width;
-    [SerializeField] private int height;
+    [SerializeField] private int width, height;
 
 
     [SerializeField] private Tile tilePrefab;
+    [SerializeField] private Tile[,] tiles;
 
 
 
@@ -25,8 +25,22 @@ public class GridManager : MonoBehaviour
             {
                 Tile spawnedTile = Instantiate(tilePrefab, new Vector3(x, y), Quaternion.identity);
                 spawnedTile.name = $"Tile {x} {y}";
+
+                bool isOffset = (x + y) % 2 == 1;
+                spawnedTile.Initialize(isOffset);
+
+                //tiles[x, y] = spawnedTile;
+                spawnedTile.coordinates = new Vector2(x, y);
+
             }
         }
+    }
+
+
+
+    public Vector2 GetSize()
+    {
+        return new Vector2(width, height);
     }
 
 
