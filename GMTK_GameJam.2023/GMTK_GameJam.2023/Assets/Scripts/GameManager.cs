@@ -67,12 +67,12 @@ public class GameManager : MonoBehaviour
         {
             selectedTrap = 5;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha6))
-        {
-            selectedTrap = 6;
-        }
+        //else if (Input.GetKeyDown(KeyCode.Alpha6))
+        //{
+        //    selectedTrap = 6;
+        //}
 
-        Debug.Log(selectedTrap);
+        //Debug.Log(selectedTrap);
 
 
     }

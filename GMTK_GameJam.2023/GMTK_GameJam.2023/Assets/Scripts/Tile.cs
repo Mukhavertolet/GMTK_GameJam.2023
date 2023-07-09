@@ -26,7 +26,6 @@ public class Tile : MonoBehaviour
 
 
     public GameObject trapInstance;
-    //public List<GameObject> contents;
 
 
 
