@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour
         trapSelect[selectedTrap].color = selectedTrapColor;
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && gridManager.entrances == 1 && gridManager.finishes == 1 && amountOfTreasures == amountOfTreasuresReq && amountOfKeys == amountOfKeysReq)
+        if (Input.GetKeyDown(KeyCode.Space) && gameState == 0 && gridManager.entrances == 1 && gridManager.finishes == 1 && amountOfTreasures == amountOfTreasuresReq && amountOfKeys == amountOfKeysReq)
         {
             StartAttack();
         }

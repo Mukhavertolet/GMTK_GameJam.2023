@@ -12,7 +12,8 @@ public class Player : MonoBehaviour
     public int keys;
     public int damage;
 
-
+    public Vector2 target;
+    public Vector2 previousTile;
 
 
     private void Awake()
@@ -26,26 +27,40 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FindPath(new Vector2(transform.position.x, transform.position.y), gridManager.GetFinishPosition());
+
+        previousTile = new Vector2(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y));
+
+        target = gridManager.GetFinishPosition();
+
+        FindPath(new Vector2(transform.position.x, transform.position.y), target);
+
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            MakeTurn();
+        }
     }
 
 
     public void MakeTurn()
     {
-        //findPath
+        //gridManager.GetTileWithCoordinates(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y));
+        transform.position = FindPath(transform.position, target).transform.position;
         //if(can)
     }
 
 
 
-    public void FindPath(Vector2 startPos, Vector2 targetPos)
+    public Tile FindPath(Vector2 startPos, Vector2 targetPos)
     {
+
         Tile lookingAt = null;
         Tile lowestDistance = null;
         List<Tile> walkable = new List<Tile>();
@@ -55,7 +70,7 @@ public class Player : MonoBehaviour
         {
             lookingAt = gridManager.GetSurroundingTiles((int)startPos.x, (int)startPos.y)[i];
 
-            if (lookingAt.isClean)
+            if (lookingAt.isClean && lookingAt.coordinates != previousTile)
                 walkable.Add(lookingAt);
         }
 
@@ -67,13 +82,26 @@ public class Player : MonoBehaviour
                 continue;
             }
 
-            if ((targetPos.x + targetPos.y) - (walkable[i].coordinates.x + walkable[i].coordinates.y) < (targetPos.x + targetPos.y) - (lowestDistance.coordinates.x + lowestDistance.coordinates.y))
+            //if ((walkable[i].coordinates != previousTile || i == 3) && (targetPos.x + targetPos.y) - (walkable[i].coordinates.x + walkable[i].coordinates.y) < (targetPos.x + targetPos.y) - (lowestDistance.coordinates.x + lowestDistance.coordinates.y))
+            //    lowestDistance = walkable[i];
+
+            if (Vector3.Distance(walkable[i].transform.position, targetPos) < Vector3.Distance(startPos, targetPos))
+            {
+                if (lowestDistance.coordinates == previousTile)
+                    continue;
                 lowestDistance = walkable[i];
+            }
+
+            //if (lowestDistance == null)
+            //    lowestDistance = gridManager.GetTileWithCoordinates((int)previousTile.x, (int)previousTile.y);
+
 
         }
 
+        previousTile = startPos;
 
-            Debug.Log(lowestDistance);
+        Debug.Log(lowestDistance);
+        return lowestDistance;
 
     }
 

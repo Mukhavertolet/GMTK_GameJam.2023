@@ -109,6 +109,9 @@ public class GridManager : MonoBehaviour
                             tiles[x, y - 1]};
     }
 
-
+    public Tile GetTileWithCoordinates(int x, int y)
+    {
+        return tiles[x, y];
+    }
 
 }
