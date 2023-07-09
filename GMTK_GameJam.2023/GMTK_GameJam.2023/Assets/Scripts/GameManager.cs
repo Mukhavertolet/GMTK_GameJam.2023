@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,7 +11,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Canvas inGameUI;
     [SerializeField] private GameObject helpMenu;
     [SerializeField] private GameObject trapMenu;
+    [SerializeField] private Image[] trapSelect;
 
+    [SerializeField] private Color selectedTrapColor;
+    [SerializeField] private Color unselectedTrapColor;
 
 
     [SerializeField] private int gameState; //0 - preparation, 1 - attack
@@ -43,6 +47,8 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
             trapMenu.SetActive(!trapMenu.activeSelf);
 
+        trapSelect[selectedTrap].color = unselectedTrapColor;
+
         if(Input.GetKeyDown(KeyCode.Alpha0))
         {
             selectedTrap = 0;
@@ -67,6 +73,9 @@ public class GameManager : MonoBehaviour
         {
             selectedTrap = 5;
         }
+
+        trapSelect[selectedTrap].color = selectedTrapColor;
+
         //else if (Input.GetKeyDown(KeyCode.Alpha6))
         //{
         //    selectedTrap = 6;

@@ -61,7 +61,7 @@ public class Tile : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && isInteractable)
         {
-            if (!isClean)
+            if (!isClean || gameManager.selectedTrap == 0)
             {
                 isClean = true;
                 renderer.sprite = cleanSprite;
@@ -69,8 +69,9 @@ public class Tile : MonoBehaviour
                 linings.SetActive(true);
                 Debug.Log($"coordinates: {coordinates}");
             }
-            else
+            else 
             {
+
                 if (trapInstance != null)
                     Destroy(trapInstance);
 
@@ -80,13 +81,15 @@ public class Tile : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1) && isInteractable)
         {
-            if (!isClean)
+            if (isClean && gameManager.selectedTrap == 0)
             {
                 isClean = false;
                 renderer.sprite = filledSprite;
                 renderer.sortingOrder = 2;
                 linings.SetActive(false);
                 Debug.Log($"coordinates: {coordinates}");
+                if (trapInstance != null)
+                    Destroy(trapInstance);
             }
             else
             {
