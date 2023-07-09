@@ -3628,8 +3628,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraObj: {fileID: 963194225}
   gridManagerObj: {fileID: 1718482369}
+  heroPlayer: {fileID: 3915957988618267368, guid: 29d034044d30bd44fa6661268703d33a, type: 3}
+  heroPlayerInstance: {fileID: 0}
   inGameUI: {fileID: 1071649315}
   helpMenu: {fileID: 1726861125}
+  playerMenu: {fileID: 1524913240}
   trapMenu: {fileID: 1719047712}
   trapSelect:
   - {fileID: 2090929432}
@@ -3653,6 +3656,7 @@ MonoBehaviour:
   amountOfKeys: 0
   amountOfKeysReq: 0
   amountOfDoors: 0
+  turnCounter: 0
   selectedTrap: 0
 --- !u!4 &1373738867
 Transform:
@@ -4149,12 +4153,12 @@ GameObject:
   - component: {fileID: 1524913243}
   - component: {fileID: 1524913242}
   m_Layer: 5
-  m_Name: TrapMenu
+  m_Name: PlayerMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1524913241
 RectTransform:
   m_ObjectHideFlags: 0

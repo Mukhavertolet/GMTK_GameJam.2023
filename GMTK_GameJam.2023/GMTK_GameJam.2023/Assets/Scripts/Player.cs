@@ -12,8 +12,11 @@ public class Player : MonoBehaviour
     public int keys;
     public int damage;
 
+    public Vector2 mainTarget;
     public Vector2 target;
     public Vector2 previousTile;
+
+
 
 
     private void Awake()
@@ -28,11 +31,16 @@ public class Player : MonoBehaviour
     void Start()
     {
 
+
+        healthCurrent = healthMax;
+
         previousTile = new Vector2(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y));
 
-        target = gridManager.GetFinishPosition();
+        mainTarget = gridManager.GetFinishPosition();
 
-        FindPath(new Vector2(transform.position.x, transform.position.y), target);
+
+
+        //FindPath(new Vector2(transform.position.x, transform.position.y), target);
 
 
 
@@ -41,6 +49,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        gameManager.ChangePlayerHP();
+        gameManager.ChangePlayerKeys();
+
 
         if (Input.GetKeyDown(KeyCode.G))
         {
@@ -51,8 +62,16 @@ public class Player : MonoBehaviour
 
     public void MakeTurn()
     {
-        //gridManager.GetTileWithCoordinates(Mathf.RoundToInt(transform.position.x), Mathf.RoundToInt(transform.position.y));
-        transform.position = FindPath(transform.position, target).transform.position;
+        Vector2 closestTarget = mainTarget;
+
+        for (int i = 0; i < gameManager.goals.Count; i++)
+        {
+            if (Vector3.Distance(transform.position, gameManager.goals[i].transform.position) < Vector3.Distance(transform.position, closestTarget))
+            {
+                closestTarget = gameManager.goals[i].transform.position;
+            }
+        }
+        transform.position = FindPath(transform.position, closestTarget).transform.position;
         //if(can)
     }
 

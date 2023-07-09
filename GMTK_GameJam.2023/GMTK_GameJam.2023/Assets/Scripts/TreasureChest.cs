@@ -17,6 +17,7 @@ public class TreasureChest : MonoBehaviour
     void Start()
     {
         gameManager.changeAmountOfTreasures(1);
+        gameManager.goals.Add(gameObject);
     }
 
     // Update is called once per frame
@@ -28,6 +29,7 @@ public class TreasureChest : MonoBehaviour
     private void OnDestroy()
     {
         gameManager.changeAmountOfTreasures(-1);
+        gameManager.goals.Remove(gameObject);
 
     }
 

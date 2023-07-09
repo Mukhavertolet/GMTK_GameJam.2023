@@ -31,5 +31,15 @@ public class DangerousTrap : MonoBehaviour
 
     }
 
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Hero"))
+        {
+            collision.gameObject.GetComponent<Player>().healthCurrent -= 1;
+        }
+    }
+
+
 }
 

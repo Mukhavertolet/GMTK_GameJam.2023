@@ -37,6 +37,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int amountOfKeysReq = 0;
     [SerializeField] private int amountOfDoors = 0;
 
+    [SerializeField] private TMP_Text playerCurrentHPCounter;
+    [SerializeField] private TMP_Text playerKeyCounter;
+
+
+    public List<GameObject> goals;
+
+
 
     public int turnCounter = 0;
 
@@ -134,7 +141,7 @@ public class GameManager : MonoBehaviour
     public void SpawnPlayer(Vector2 pos)
     {
         heroPlayerInstance = Instantiate(heroPlayer, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
-    }    
+    }
 
     public void StartAttack()
     {
@@ -163,6 +170,14 @@ public class GameManager : MonoBehaviour
 
 
 
+    public void ChangePlayerHP()
+    {
+        playerCurrentHPCounter.text = heroPlayerInstance.GetComponent<Player>().healthCurrent.ToString();
+    }
+    public void ChangePlayerKeys()
+    {
+        playerKeyCounter.text = heroPlayerInstance.GetComponent<Player>().keys.ToString();
+    }
 
 
 
