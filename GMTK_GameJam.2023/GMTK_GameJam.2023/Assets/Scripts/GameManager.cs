@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -12,12 +14,23 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject helpMenu;
     [SerializeField] private GameObject trapMenu;
     [SerializeField] private Image[] trapSelect;
+    [SerializeField] private TMP_Text treasureCounter;
+    [SerializeField] private TMP_Text treasureCounterReq;
+    [SerializeField] private TMP_Text keyCounter;
+    [SerializeField] private TMP_Text keyCounterReq;
 
     [SerializeField] private Color selectedTrapColor;
     [SerializeField] private Color unselectedTrapColor;
 
 
     [SerializeField] private int gameState; //0 - preparation, 1 - attack
+
+    [SerializeField] private int amountOfTraps = 0;
+    [SerializeField] private int amountOfTreasures = 0;
+    [SerializeField] private int amountOfTreasuresReq = 0;
+    [SerializeField] private int amountOfKeys = 0;
+    [SerializeField] private int amountOfKeysReq = 0;
+    [SerializeField] private int amountOfDoors = 0;
 
 
 
@@ -41,6 +54,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        amountOfTreasuresReq = amountOfTraps / 4;
+        amountOfKeysReq = amountOfTreasures + amountOfDoors;
+
+
+        treasureCounter.text = amountOfTreasures.ToString();
+        treasureCounterReq.text = amountOfTreasuresReq.ToString();
+        keyCounter.text = amountOfKeys.ToString();
+        keyCounterReq.text = amountOfKeysReq.ToString();
+
         if (Input.GetKeyDown(KeyCode.Tab))
             helpMenu.SetActive(!helpMenu.activeSelf);
 
@@ -97,10 +119,27 @@ public class GameManager : MonoBehaviour
 
     public void ChangeGameStateTo(int gameState)
     {
-        if(gameState != 0 && gridManager.entrances == 1 && gridManager.finishes == 1)
+        if(gameState != 0 && gridManager.entrances == 1 && gridManager.finishes == 1 && amountOfTreasures == amountOfTreasuresReq && keyCounter == keyCounterReq)
         {
             gridManager.ChangeTileInteractabilityTo(false);
         }
     }
 
+    public void changeAmountOfKeys(int changeBy)
+    {
+        amountOfKeys += changeBy;
+    }
+
+    public void changeAmountOfTreasures(int changeBy)
+    {
+        amountOfTreasures += changeBy;
+    }
+    public void changeAmountOfDoors(int changeBy)
+    {
+        amountOfDoors += changeBy;
+    }
+    public void changeAmountOfTraps(int changeBy)
+    {
+        amountOfTraps += changeBy;
+    }
 }
