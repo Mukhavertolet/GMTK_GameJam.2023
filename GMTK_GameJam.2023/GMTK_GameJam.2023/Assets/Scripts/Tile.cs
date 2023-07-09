@@ -24,7 +24,9 @@ public class Tile : MonoBehaviour
     public Vector2 coordinates;
     public bool isClean = false;
 
-    public List<GameObject> contents;
+
+    public GameObject trapInstance;
+    //public List<GameObject> contents;
 
 
 
@@ -70,7 +72,10 @@ public class Tile : MonoBehaviour
             }
             else
             {
-                contents.Add(Instantiate(availableContents[gameManager.selectedTrap], transform.position, Quaternion.identity));
+                if (trapInstance != null)
+                    Destroy(trapInstance);
+
+                trapInstance = Instantiate(availableContents[gameManager.selectedTrap], transform.position, Quaternion.identity);
             }
         }
 
@@ -86,7 +91,9 @@ public class Tile : MonoBehaviour
             }
             else
             {
-                contents.Remove(contents.Find(_ => availableContents[gameManager.selectedTrap]));
+                if (trapInstance != null)
+                    Destroy(trapInstance);
+
             }
         }
 
