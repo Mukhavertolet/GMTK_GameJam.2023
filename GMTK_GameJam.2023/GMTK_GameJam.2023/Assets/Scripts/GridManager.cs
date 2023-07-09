@@ -15,7 +15,6 @@ public class GridManager : MonoBehaviour
 
 
 
-
     private void Awake()
     {
         tiles = new Tile[width, height];
@@ -64,6 +63,51 @@ public class GridManager : MonoBehaviour
         return new Vector2(width, height);
     }
 
+    public Vector2 GetEntrancePosition()
+    {
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                if (tiles[x, y].trapInstance != null && tiles[x, y].trapInstance.CompareTag("Respawn"))
+                {
+                    return new Vector2(x, y);
+                }
+                //Debug.Log(tiles[x, y].trapInstance);
+            }
+        }
+
+        return Vector2.zero;
+
+    }
+
+    public Vector2 GetFinishPosition()
+    {
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                if (tiles[x, y].trapInstance != null && tiles[x, y].trapInstance.CompareTag("Finish"))
+                {
+                    return new Vector2(x, y);
+                }
+                //Debug.Log(tiles[x, y].trapInstance);
+            }
+        }
+
+        return Vector2.zero;
+
+    }
+
+
+
+    public List<Tile> GetSurroundingTiles(int x, int y)
+    {
+        return new List<Tile> {tiles[x + 1, y],
+                            tiles[x, y + 1],
+                            tiles[x - 1, y],
+                            tiles[x, y - 1]};
+    }
 
 
 

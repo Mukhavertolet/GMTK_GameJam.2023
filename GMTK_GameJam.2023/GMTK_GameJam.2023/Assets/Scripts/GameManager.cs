@@ -9,9 +9,14 @@ public class GameManager : MonoBehaviour
 {
     public GameObject cameraObj, gridManagerObj;
 
+    public GameObject heroPlayer;
+    public GameObject heroPlayerInstance;
+
+
     private GridManager gridManager;
     [SerializeField] private Canvas inGameUI;
     [SerializeField] private GameObject helpMenu;
+    [SerializeField] private GameObject playerMenu;
     [SerializeField] private GameObject trapMenu;
     [SerializeField] private Image[] trapSelect;
     [SerializeField] private TMP_Text treasureCounter;
@@ -32,6 +37,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int amountOfKeysReq = 0;
     [SerializeField] private int amountOfDoors = 0;
 
+
+    public int turnCounter = 0;
 
 
     public int selectedTrap = 0; //0 - room, 1 - key, 2 - chest, 3 - skelekok, 4 - spikes, 5 - keyhole, 6 - oneWayDoor;
@@ -66,16 +73,16 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
             helpMenu.SetActive(!helpMenu.activeSelf);
 
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z) && gameState == 0)
             trapMenu.SetActive(!trapMenu.activeSelf);
 
         trapSelect[selectedTrap].color = unselectedTrapColor;
 
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             selectedTrap = 0;
         }
-        else if(Input.GetKeyDown(KeyCode.Alpha2))
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             selectedTrap = 1;
         }
@@ -106,6 +113,12 @@ public class GameManager : MonoBehaviour
 
         trapSelect[selectedTrap].color = selectedTrapColor;
 
+
+        if (Input.GetKeyDown(KeyCode.Space) && gridManager.entrances == 1 && gridManager.finishes == 1 && amountOfTreasures == amountOfTreasuresReq && amountOfKeys == amountOfKeysReq)
+        {
+            StartAttack();
+        }
+
         //else if (Input.GetKeyDown(KeyCode.Alpha6))
         //{
         //    selectedTrap = 6;
@@ -117,12 +130,45 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void ChangeGameStateTo(int gameState)
+
+    public void SpawnPlayer(Vector2 pos)
     {
-        if(gameState != 0 && gridManager.entrances == 1 && gridManager.finishes == 1 && amountOfTreasures == amountOfTreasuresReq && keyCounter == keyCounterReq)
-        {
-            gridManager.ChangeTileInteractabilityTo(false);
-        }
+        heroPlayerInstance = Instantiate(heroPlayer, new Vector3(pos.x, pos.y, 0), Quaternion.identity);
+    }    
+
+    public void StartAttack()
+    {
+        gridManager.ChangeTileInteractabilityTo(false);
+        SpawnPlayer(gridManager.GetEntrancePosition());
+        ChangeGameStateTo(1);
+
+        helpMenu.SetActive(false);
+        trapMenu.SetActive(false);
+        playerMenu.SetActive(true);
+
+
+    }
+
+
+    public IEnumerator Turn()
+    {
+
+
+
+
+
+        yield return new WaitForSeconds(3f);
+    }
+
+
+
+
+
+
+
+    public void ChangeGameStateTo(int gameStateChange)
+    {
+        gameState = gameStateChange;
     }
 
     public void changeAmountOfKeys(int changeBy)
