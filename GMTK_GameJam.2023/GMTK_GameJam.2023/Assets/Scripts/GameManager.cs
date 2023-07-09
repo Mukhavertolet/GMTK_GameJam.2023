@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
 
 
 
+    public int selectedTrap = 0; //0 - room, 1 - key, 2 - chest, 3 - skelekok, 4 - spikes, 5 - keyhole, 6 - oneWayDoor;
+
+
+
     private void Awake()
     {
         gridManager = gridManagerObj.GetComponent<GridManager>();
@@ -38,6 +42,39 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z))
             trapMenu.SetActive(!trapMenu.activeSelf);
+
+        if(Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            selectedTrap = 0;
+        }
+        else if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            selectedTrap = 1;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            selectedTrap = 2;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            selectedTrap = 3;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            selectedTrap = 4;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            selectedTrap = 5;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            selectedTrap = 6;
+        }
+
+        Debug.Log(selectedTrap);
+
+
     }
 
 

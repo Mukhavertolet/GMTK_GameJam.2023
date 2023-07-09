@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
+    [SerializeField] private GameManager gameManager;
+
     [SerializeField] private bool isInteractable = true;
 
 
     [SerializeField] private Color baseColor, offsetColor;
     [SerializeField] private SpriteRenderer renderer;
     [SerializeField] private GameObject highlight;
+    [SerializeField] private SpriteRenderer contentPreview;
+    [SerializeField] private Sprite[] contentPreviewVariants;
+    [SerializeField] private GameObject[] availableContents;
 
     [SerializeField] private Sprite filledSprite;
     [SerializeField] private Sprite cleanSprite;
@@ -23,6 +28,11 @@ public class Tile : MonoBehaviour
 
 
 
+    private void Awake()
+    {
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+    }
+
     public void Initialize(bool isOffset)
     {
         renderer.color = isOffset ? offsetColor : baseColor;
@@ -34,32 +44,50 @@ public class Tile : MonoBehaviour
     {
         if (isInteractable)
             highlight.SetActive(true);
+        if (isClean)
+            contentPreview.sprite = contentPreviewVariants[gameManager.selectedTrap];
     }
 
     private void OnMouseExit()
     {
         if (isInteractable)
             highlight.SetActive(false);
+        if (isClean)
+            contentPreview.sprite = contentPreviewVariants[0];
     }
 
     private void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0) && isInteractable)
         {
-            isClean = true;
-            renderer.sprite = cleanSprite;
-            renderer.sortingOrder = 4;
-            linings.SetActive(true);
-            Debug.Log($"coordinates: {coordinates}");
+            if (!isClean)
+            {
+                isClean = true;
+                renderer.sprite = cleanSprite;
+                renderer.sortingOrder = 4;
+                linings.SetActive(true);
+                Debug.Log($"coordinates: {coordinates}");
+            }
+            else
+            {
+                contents.Add(Instantiate(availableContents[gameManager.selectedTrap], transform.position, Quaternion.identity));
+            }
         }
 
         if (Input.GetMouseButtonDown(1) && isInteractable)
         {
-            isClean = false;
-            renderer.sprite = filledSprite;
-            renderer.sortingOrder = 2;
-            linings.SetActive(false);
-            Debug.Log($"coordinates: {coordinates}");
+            if (!isClean)
+            {
+                isClean = false;
+                renderer.sprite = filledSprite;
+                renderer.sortingOrder = 2;
+                linings.SetActive(false);
+                Debug.Log($"coordinates: {coordinates}");
+            }
+            else
+            {
+                contents.Remove(contents.Find(_ => availableContents[gameManager.selectedTrap]));
+            }
         }
 
 
