@@ -49,29 +49,37 @@ public class GameManager : MonoBehaviour
 
         trapSelect[selectedTrap].color = unselectedTrapColor;
 
-        if(Input.GetKeyDown(KeyCode.Alpha0))
+        if(Input.GetKeyDown(KeyCode.Alpha1))
         {
             selectedTrap = 0;
         }
-        else if(Input.GetKeyDown(KeyCode.Alpha1))
+        else if(Input.GetKeyDown(KeyCode.Alpha2))
         {
             selectedTrap = 1;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             selectedTrap = 2;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             selectedTrap = 3;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             selectedTrap = 4;
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        else if (Input.GetKeyDown(KeyCode.Alpha6))
         {
             selectedTrap = 5;
+        }
+        else if (Input.GetKeyDown(KeyCode.E))
+        {
+            selectedTrap = 6;
+        }
+        else if (Input.GetKeyDown(KeyCode.F))
+        {
+            selectedTrap = 7;
         }
 
         trapSelect[selectedTrap].color = selectedTrapColor;
@@ -89,7 +97,7 @@ public class GameManager : MonoBehaviour
 
     public void ChangeGameStateTo(int gameState)
     {
-        if(gameState != 0)
+        if(gameState != 0 && gridManager.entrances == 1 && gridManager.finishes == 1)
         {
             gridManager.ChangeTileInteractabilityTo(false);
         }

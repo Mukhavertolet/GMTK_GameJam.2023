@@ -10,6 +10,8 @@ public class GridManager : MonoBehaviour
     [SerializeField] private Tile tilePrefab;
     [SerializeField] private Tile[,] tiles;
 
+    public int entrances = 0;
+    public int finishes = 0;
 
 
 
@@ -26,7 +28,7 @@ public class GridManager : MonoBehaviour
 
     void GenerateGrid()
     {
-        for(int x = 0; x < width; x++)
+        for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
             {
@@ -61,6 +63,8 @@ public class GridManager : MonoBehaviour
     {
         return new Vector2(width, height);
     }
+
+
 
 
 }

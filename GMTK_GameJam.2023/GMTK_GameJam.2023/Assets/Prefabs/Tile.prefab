@@ -570,7 +570,8 @@ MonoBehaviour:
   - {fileID: 275502698, guid: b2034a3d92d987d4ca7fba3b78e4ec65, type: 3}
   - {fileID: 595631047, guid: b2034a3d92d987d4ca7fba3b78e4ec65, type: 3}
   - {fileID: 680752227, guid: b2034a3d92d987d4ca7fba3b78e4ec65, type: 3}
-  - {fileID: 2079611062, guid: b2034a3d92d987d4ca7fba3b78e4ec65, type: 3}
+  - {fileID: 1435308958, guid: b2034a3d92d987d4ca7fba3b78e4ec65, type: 3}
+  - {fileID: -1240883999, guid: b2034a3d92d987d4ca7fba3b78e4ec65, type: 3}
   availableContents:
   - {fileID: 0}
   - {fileID: 1470532369014177078, guid: 58e99af04be80b14ea5f0ac441773671, type: 3}
@@ -578,13 +579,14 @@ MonoBehaviour:
   - {fileID: 896867102493054302, guid: b1e803d0dec1f2947a6ab714704c098d, type: 3}
   - {fileID: 4061002459219813321, guid: 0eb3f20c6b4bf7f41b62109b81e14dbc, type: 3}
   - {fileID: 311115058170855969, guid: d213792259de87d47bcea13db4f22a2a, type: 3}
-  - {fileID: 5968005336260334217, guid: 9d977908f400b5448b74209fc22da777, type: 3}
+  - {fileID: 5861910776355922199, guid: 12b2d534d5bc66a448d0eb4b31a5bfc2, type: 3}
+  - {fileID: 7744500437455629873, guid: 0edd9f6ec1e06514ea46b35567d1c7c4, type: 3}
   filledSprite: {fileID: 247988975, guid: b2034a3d92d987d4ca7fba3b78e4ec65, type: 3}
   cleanSprite: {fileID: -1867482886, guid: b2034a3d92d987d4ca7fba3b78e4ec65, type: 3}
   linings: {fileID: 7735714545997318321}
   coordinates: {x: 0, y: 0}
   isClean: 0
-  contents: []
+  trapInstance: {fileID: 0}
 --- !u!61 &4897682078776042220
 BoxCollider2D:
   m_ObjectHideFlags: 0

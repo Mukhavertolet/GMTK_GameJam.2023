@@ -538,7 +538,7 @@ TextureImporter:
         width: 10
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -559,7 +559,7 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -567,6 +567,48 @@ TextureImporter:
       bones: []
       spriteID: 4170712c5081fc647b9c748d508e2c19
       internalID: 2126351351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crown-sprite
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 11
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a4380b78e62cc4999e4a444f2adc71
+      internalID: -1240883999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Entrance=sprite
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 196
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a0d5346e816fc4e9e6c65b81819cfa
+      internalID: 1435308958
       vertices: []
       indices: 
       edges: []
@@ -585,6 +627,8 @@ TextureImporter:
       Arrow-sprite: 2079611062
       ArrowPlace-sprite: -1011368126
       Chest: 2126351351
+      Crown-sprite: -1240883999
+      Entrance=sprite: 1435308958
       GroundEmptyTile-sprite: 247988975
       GroundLine-sprite: 1584681877
       GroundSmallTile-sprite: 1359497155

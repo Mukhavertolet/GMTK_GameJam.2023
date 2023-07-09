@@ -5,6 +5,7 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private GridManager gridManager;
 
     [SerializeField] private bool isInteractable = true;
 
@@ -14,7 +15,7 @@ public class Tile : MonoBehaviour
     [SerializeField] private GameObject highlight;
     [SerializeField] private SpriteRenderer contentPreview;
     [SerializeField] private Sprite[] contentPreviewVariants;
-    [SerializeField] private GameObject[] availableContents;
+    public GameObject[] availableContents;
 
     [SerializeField] private Sprite filledSprite;
     [SerializeField] private Sprite cleanSprite;
@@ -32,6 +33,7 @@ public class Tile : MonoBehaviour
     private void Awake()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        gridManager = GameObject.FindGameObjectWithTag("GridManager").GetComponent<GridManager>();
     }
 
     public void Initialize(bool isOffset)
@@ -69,13 +71,24 @@ public class Tile : MonoBehaviour
                 linings.SetActive(true);
                 Debug.Log($"coordinates: {coordinates}");
             }
-            else 
+            else
             {
 
                 if (trapInstance != null)
+                {
+                    if (trapInstance.GetComponent<Trap>().trapType == 6)
+                        gridManager.entrances -= 1;
+                    if (trapInstance.GetComponent<Trap>().trapType == 7)
+                        gridManager.finishes -= 1;
                     Destroy(trapInstance);
+                }
 
                 trapInstance = Instantiate(availableContents[gameManager.selectedTrap], transform.position, Quaternion.identity);
+
+                if (trapInstance.GetComponent<Trap>().trapType == 6)
+                    gridManager.entrances += 1;
+                if (trapInstance.GetComponent<Trap>().trapType == 7)
+                    gridManager.finishes += 1;
             }
         }
 
@@ -88,6 +101,13 @@ public class Tile : MonoBehaviour
                 renderer.sortingOrder = 2;
                 linings.SetActive(false);
                 Debug.Log($"coordinates: {coordinates}");
+
+
+                if (trapInstance.GetComponent<Trap>().trapType == 6)
+                    gridManager.entrances -= 1;
+                if (trapInstance.GetComponent<Trap>().trapType == 7)
+                    gridManager.finishes -= 1;
+
                 if (trapInstance != null)
                     Destroy(trapInstance);
             }
@@ -95,6 +115,12 @@ public class Tile : MonoBehaviour
             {
                 if (trapInstance != null)
                     Destroy(trapInstance);
+
+
+                if (trapInstance.GetComponent<Trap>().trapType == 6)
+                    gridManager.entrances -= 1;
+                if (trapInstance.GetComponent<Trap>().trapType == 7)
+                    gridManager.finishes -= 1;
 
             }
         }
